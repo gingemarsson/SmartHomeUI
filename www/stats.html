@@ -59,13 +59,90 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row"> <!-- Header -->
                     <div class="col-lg-12">
                         <h1>Statistics</h1>
+                        
+                        <div class="btn-group pull-right unitSelector" data-toggle="buttons">    
+                            <label class="btn btn-success active">
+                                <input type="radio" name="unitSelector" id="option0" data-unit="KWh" data-mul="1" autocomplete="off" checked > KWh
+                            </label>
+                            <label class="btn btn-success">
+                                <input type="radio" name="unitSelector" id="option1" data-unit="Kr" data-mul="0.25" autocomplete="off"> Kr
+                            </label>
+                            <label class="btn btn-success">
+                                <input type="radio" name="unitSelector" id="option2" data-unit="CO2" data-mul="1.5" autocomplete="off"> CO2
+                            </label>
+                            <label class="btn btn-success">
+                                <input type="radio" name="unitSelector" id="option3" data-unit="Tons coal" data-mul="5" autocomplete="off"> Tons coal
+                            </label>
+                        </div>
+                        
                         <p>Here is an overview of energy consumption:</p>
+                        
                     </div>
-                </div>
-                <div class="row">
+                </div> <!-- /#Header -->
+                <div class="row"> <!-- Top row: Ranking, outlet toplist and consumption breakdown -->
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="tile">
+                            <p>
+                                <h3>Current ranking:</h3>
+                                <p class="text-center bigText">#86</p>
+                                <p>Among SmartHome users with four room apartments i Stockholm, Sweden (<a href="settings.html">Change location</a>).</p>
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-sm-6">
+                        <div class="tile">
+                            <p>
+                                <h3>Current outlet toplist</h3>
+                               <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Energy Consumption per month</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>1</td><td>Dishwasher</td><td><span class="energyUnit" data-value="59">59 KWh</span></td></tr>
+                                    <tr><td>2</td><td>TV bench</td><td><span class="energyUnit" data-value="45">45 KWh</span></td></tr>
+                                    <tr><td>3</td><td>Kitchen 1</td><td><span class="energyUnit" data-value="35">35 KWh</span></td></tr>
+                                    <tr><td>4</td><td>Kitchen 2</td><td><span class="energyUnit" data-value="33">33 KWh</span></td></tr>
+                                    <tr><td>5</td><td>Bedstand lamp</td><td><span class="energyUnit" data-value="13">13 KWh</span></td></tr>
+                                    
+                                    <tr class="hiddenRow"><td>6</td><td>Desktop outlet</td><td><span class="energyUnit" data-value="11">11 KWh</span></td></tr>
+                                    <tr class="hiddenRow"><td>7</td><td>Kitchen TV</td><td><span class="energyUnit" data-value="11">11 KWh</span></td></tr>
+                                    <tr class="hiddenRow"><td>8</td><td>Reading lamp</td><td><span class="energyUnit" data-value="10">10 KWh</span></td></tr>
+                                    <tr class="hiddenRow"><td>9</td><td>Network equipment</td><td><span class="energyUnit" data-value="10">10 KWh</span></td></tr>
+                                    <tr class="hiddenRow"><td>10</td><td>Hall outlet</td><td><span class="energyUnit" data-value="9">9 KWh</span></td></tr>
+                                    <tr class="hiddenRow"><td>11</td><td>Bedroom TV</td><td><span class="energyUnit" data-value="7">7 KWh</span></td></tr>
+                                    <tr class="hiddenRow"><td>12</td><td>Reading lamp</td><td><span class="energyUnit" data-value="2">2 KWh</span></td></tr>
+                                </tbody>
+                            </table>
+                            <button type="button" class="btn btn-success center-block" id="showMoreOutlets">Load more...</button>
+                            </p>
+                        </div>
+                    </div> 
+                    <div class="col-lg-8 col-sm-12">
+                        <div class="tile">
+                            <h3>Enery conumption breakdown</h3>
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="center-block" style="max-width: 300px; max-height: 300px;">
+                                        <canvas id="graph0" height="300" width="300"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-6">
+                                    <span id="legend0"></span>
+                                    <a href="#per_outlet">More details below</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- /#Top row -->
+                <div class="row"> <!-- This week graph -->
                     <div class="col-lg-12">
                         <div class="tile">
                             <p>
@@ -74,47 +151,60 @@
                                     <canvas id="graph1" height="150" width="600"></canvas>
                                 </div>
                             </p>
+                            <span id="legend1"></span>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="tile">
-                            <p>
-                                <h3>Enery consumption last week</h3>
-                                
-                                <div>
-                                    <canvas id="graph2" height="150" width="600"></canvas>
-                                </div>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
+                </div> <!-- /#This week graph -->
+                <div class="row"> <!-- This month graph -->
                     <div class="col-lg-12">
                         <div class="tile">
                             <p>
                                 <h3>Enery consumption this month</h3>
-                                
                                 <div>
                                     <canvas id="graph3" height="150" width="600"></canvas>
                                 </div>
+                                <p id="legend3"></p>
                             </p>
                         </div>
                     </div>
-                </div><div class="row">
+                </div> <!-- /#This month graph -->
+                <div class="row"> <!-- Per outlet graph -->
                     <div class="col-lg-12">
                         <div class="tile">
                             <p>
-                                <h3>Enery consumption this year</h3>
-                                
+                                <h3>Enery consumption per outlet</h3><a name="per_outlet"></a>
+                                <div>
+                                    <form action="demo_form.asp">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-lg-4">
+                                                <label class="outletList"><input type="checkbox"  data-outletID="0" checked disabled>Dishwasher</label>
+                                                <label class="outletList"><input type="checkbox"  data-outletID="1" >TV bench</label>
+                                                <label class="outletList"><input type="checkbox"  data-outletID="4" >Bedstand Lamp</label>
+                                                <label class="outletList"><input type="checkbox"  data-outletID="8" >Network equipment</label>
+                                            </div>                                                
+                                            <div class="col-xs-12 col-sm-6 col-lg-4">             
+                                                <label class="outletList"><input type="checkbox"  data-outletID="2" >Kitchen 1</label>
+                                                <label class="outletList"><input type="checkbox"  data-outletID="3" >Kitchen 2</label>
+                                                <label class="outletList"><input type="checkbox"  data-outletID="6" >Kitchen TV</label>
+                                                <label class="outletList"><input type="checkbox"  data-outletID="9" >Hall outlet</label>
+                                                                                                 
+                                            </div>                                                
+                                            <div class="col-xs-12 col-sm-6 col-lg-4">             
+                                                <label class="outletList"><input type="checkbox"  data-outletID="5" >Desktop outlet</label>
+                                                <label class="outletList"><input type="checkbox"  data-outletID="7" >Bedroom TV</label>
+                                                <label class="outletList"><input type="checkbox"  data-outletID="10" >Reading lamp</label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
                                 <div>
                                     <canvas id="graph4" height="150" width="600"></canvas>
                                 </div>
+                                <span id="legend4"></span>
                             </p>
                         </div>
                     </div>
-                </div>
+                </div><!-- /#Per outlet graph -->
                 <div class="footer">
                     <div class="col-lg-12">
                         <p>Icons from <a href="http://dryicons.com">http://dryicons.com</a></p>
@@ -127,12 +217,12 @@
     </div>
     <!-- /#wrapper -->
 
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    
     <!-- Chart -->
     <script src="js/Chart.min.js"></script>
     <script src="js/stats-script.js"></script>
-    
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

@@ -27,6 +27,14 @@ h2, h3 {
     font-family: 'Lora', serif; font-weight: 400; font-style: italic;
 }
 
+.bigText {
+    font-family: 'Lora', serif; font-weight: 400; font-style: italic; font-size: 4em;
+}
+
+.unitSelector {
+  margin-bottom: 10px;
+}
+
 #sidebar-wrapper {
     background-color: #3EBB8E;
 }
@@ -50,6 +58,33 @@ h2, h3 {
 .table > thead > tr > th {
     border-bottom: 2px solid #444;
 }
+
+.outletList {
+    font-weight: normal;
+    display: block;
+}
+
+.outletList input {margin-right: 5px;}
+
+.legend {
+    list-style: none;
+}
+
+.legendColor {
+    display: inline-block; 
+    margin-right: 10px; 
+    width: 10px; 
+    height: 10px;
+    //border: 1px solid white;
+    border-radius: 50%;
+}
+
+ul.legend li {
+    display: inline-block;
+    width: 180px;
+}
+
+.hiddenRow {display: none;}
 
 #g1 {
     width:400px; 
