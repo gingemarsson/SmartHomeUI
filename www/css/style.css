@@ -27,8 +27,40 @@ h2, h3 {
     font-family: 'Lora', serif; font-weight: 400; font-style: italic;
 }
 
+h4{		
+    font-family: 'Lora', serif; font-weight: 400; font-style: italic;		
+}		
+.marginOutlet {		
+	display: inline-block; width: 135px; height: 20px; margin-bottom: 5px;		
+}		
+.marginDay {		
+	display: inline-block; width: 75px; height: 20px; margin-bottom: 5px;		
+}		
+.marginTime {		
+	display: inline-block; width: 82px; height: 20px; margin-bottom: 5px;		
+}		
+.marginTTPO {		
+	display: inline-block; width: 130px; height: 20px; margin-left: 50px;  margin-bottom: 5px;		
+}		
+.marginTTS {		
+	display: inline-block; width: 80px; height: 20px; margin-left: 2px;  margin-bottom: 5px;		
+}		
+.marginBox {		
+	display: inline-block; width: 65px; height: 20px;		
+}
+
 .bigText {
     font-family: 'Lora', serif; font-weight: 400; font-style: italic; font-size: 4em;
+}
+
+.modalHeader {		
+	font-family: 'Lora', serif; font-weight: 400; font-style: italic; color: black;		
+}		
+.modalBodyHeader {		
+	color: black;		
+}		
+.modalTimeHeader {		
+	color: black; margin-left: 1em;		
 }
 
 .unitSelector {

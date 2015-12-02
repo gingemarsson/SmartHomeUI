@@ -62,7 +62,17 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1>Control</h1>
-                        <p>Here is an overview of energy consumption:</p>
+                        <p>Here you are able to control your outlets:</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-sm-6">
+                        <div class="tile">
+                            <h3>Did you know?</h3>
+                            <p>
+                                If you want an outlet to turn on or off at a specific time of day or when a specific event occurs, head over to <a href="planned.html"> the schedule</a> and start planning!
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -71,108 +81,228 @@
                             <h3>Bedroom</h3>
                             <table class="table table-striped">
                                 <thead>
-                                <tr>
-                                    <th>Outlet</th>
-                                    <th>Description</th>
-                                    <th>Status</th>
-                                    <th>Controls</th>
-                                </tr>
+                                    <tr>
+                                        <th>Outlet</th>
+                                        <th>Quick control</th>
+                                        <th>Settings</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>Bedroom 1</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <div class="btn-group" role="group" aria-label="...">
-                                           <button type="button" class="btn btn-success">On</button>
-                                            <button type="button" class="btn btn-default">Off</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Bedroom 2</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <div class="btn-group" role="group" aria-label="...">
-                                           <button type="button" class="btn btn-success">On</button>
-                                            <button type="button" class="btn btn-default">Off</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Bedroom 3</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <div class="btn-group" role="group" aria-label="...">
-                                           <button type="button" class="btn btn-success">On</button>
-                                            <button type="button" class="btn btn-default">Off</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Bedroom 4</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <div class="btn-group" role="group" aria-label="...">
-                                           <button type="button" class="btn btn-success">On</button>
-                                            <button type="button" class="btn btn-default">Off</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Bedroom 5</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <div class="btn-group" role="group" aria-label="...">
-                                           <button type="button" class="btn btn-success">On</button>
-                                            <button type="button" class="btn btn-default">Off</button>
-                                        </div>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td>Bedstand lamp</td>
+                                        <td>
+                                            <div class="btn-group" data-toggle="buttons">    
+                                                <button type="button" class="btn btn-success btn-sm">On</button>
+                                                <button type="button" class="btn btn-success btn-sm">Off</button>
+                                            </div>
+                                        </td>
+                                        <td> 
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">
+                                                Bestand Lamp settings
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bedroom TV</td>
+                                        <td>
+                                            <div class="btn-group" data-toggle="buttons">    
+                                                <button type="button" class="btn btn-success btn-sm">On</button>
+                                                <button type="button" class="btn btn-success btn-sm">Off</button>
+                                            </div>
+                                        </td>
+                                        <td> 
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">
+                                                Bedroom TV Settings
+                                            </button>                                  
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Reading lamp</td>
+                                        <td>
+                                            <div class="btn-group" data-toggle="buttons">    
+                                                <button type="button" class="btn btn-success btn-sm">On</button>
+                                                <button type="button" class="btn btn-success btn-sm">Off</button>
+                                            </div>
+                                        </td>
+                                        <td> 
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">
+                                                Reading Lamp Settings
+                                            </button>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="tile">
-                            <h3>Bathroom</h3>
+                            <h3>Kitchen</h3>
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
                                     <th>Outlet</th>
-                                    <th>Description</th>
-                                    <th>Status</th>
-                                    <th>Controls</th>
+                                    <th>Quick control</th>
+                                    <th>Settings</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>Bedroom 1</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <div class="btn-group" role="group" aria-label="...">
-                                           <button type="button" class="btn btn-success">On</button>
-                                            <button type="button" class="btn btn-default">Off</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Bedroom 2</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <div class="btn-group" role="group" aria-label="...">
-                                           <button type="button" class="btn btn-success">On</button>
-                                            <button type="button" class="btn btn-default">Off</button>
-                                        </div>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td>Dishwasher</td>
+                                        <td>
+                                            <div class="btn-group" data-toggle="buttons">    
+                                                <button type="button" class="btn btn-success btn-sm">On</button>
+                                                <button type="button" class="btn btn-success btn-sm">Off</button>
+                                            </div>
+                                        </td>
+                                        <td> 
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">
+                                                Dishwasher Settings
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kitchen TV</td>
+                                        <td>
+                                            <div class="btn-group" data-toggle="buttons">    
+                                                <button type="button" class="btn btn-success btn-sm">On</button>
+                                                <button type="button" class="btn btn-success btn-sm">Off</button>
+                                            </div>
+                                        </td>
+                                        <td> 
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">
+                                                Kitchen TV Settings
+                                            </button>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kitchen 1</td>
+                                        <td>
+                                            <div class="btn-group" data-toggle="buttons">    
+                                                <button type="button" class="btn btn-success btn-sm">On</button>
+                                                <button type="button" class="btn btn-success btn-sm">Off</button>
+                                            </div>
+                                        </td>
+                                        <td> 
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">
+                                                Kitchen 1 Settings
+                                            </button>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kitchen 2</td>
+                                        <td>
+                                            <div class="btn-group" data-toggle="buttons">    
+                                                <button type="button" class="btn btn-success btn-sm">On</button>
+                                                <button type="button" class="btn btn-success btn-sm">Off</button>
+                                            </div>
+                                        </td>
+                                        <td> 
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">
+                                                Kitchen 2 Settings
+                                            </button>
+                                      </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="tile">
+                            <h3>Living Room</h3>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Outlet</th>
+                                        <th>Quick control</th>
+                                        <th>Settings</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>TV bench</td>
+                                        <td>
+                                            <div class="btn-group" data-toggle="buttons">    
+                                                <button type="button" class="btn btn-success btn-sm">On</button>
+                                                <button type="button" class="btn btn-success btn-sm">Off</button>
+                                            </div>
+                                        </td>
+                                        <td> 
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">
+                                                TV bench Settings
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Desktop outlet</td>
+                                        <td>
+                                            <div class="btn-group" data-toggle="buttons">    
+                                                <button type="button" class="btn btn-success btn-sm">On</button>
+                                                <button type="button" class="btn btn-success btn-sm">Off</button>
+                                            </div>
+                                        </td>
+                                        <td> 
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">
+                                                Desktop outlet Settings
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="tile">
+                            <h3>Other</h3>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Outlet</th>
+                                        <th>Quick control</th>
+                                        <th>Settings</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Hall outlet</td>
+                                        <td>
+                                            <div class="btn-group" data-toggle="buttons">    
+                                                <button type="button" class="btn btn-success btn-sm">On</button>
+                                                <button type="button" class="btn btn-success btn-sm">Off</button>
+                                            </div>
+                                        </td>
+                                        <td> 
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">
+                                                Hall outlet Settings
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Network equipment</td>
+                                        <td>
+                                            <div class="btn-group" data-toggle="buttons">    
+                                                <button type="button" class="btn btn-success btn-sm">On</button>
+                                                <button type="button" class="btn btn-success btn-sm">Off</button>
+                                            </div>
+                                        </td>
+                                        <td> 
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">
+                                                Network equipment Settings
+                                            </button>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -181,6 +311,59 @@
                 <div class="footer">
                     <div class="col-lg-12">
                         <p>Icons from <a href="http://dryicons.com">http://dryicons.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title modalHeader" id="myModalLabel">Advanced control</h4>
+                        </div>
+                        <div class="modal-body row">
+                            <!-- Drop Down -->
+                            <div class="col-lg-6">
+                                <div class="dropdown">
+                                    <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">
+                                        Turn off in
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel" data-dismiss="modal">
+                                        <li><a href="#">10 minutes</a></li>
+                                        <li><a href="#">15 minutes</a></li>
+                                        <li><a href="#">30 minutes</a></li>
+                                        <li><a href="#">60 minutes</a></li>
+                                        <li><a href="#">120 minutes</a></li>
+                                        <li><a href="#">At dawn</a></li>
+                                        <li><a href="#">At sunset</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Drop Down -->
+                            <div class="col-lg-6">
+                                <div class="dropdown">
+                                    <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">
+                                        Turn on in
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel" data-dismiss="modal">
+                                        <li><a href="#">10 minutes</a></li>
+                                        <li><a href="#">15 minutes</a></li>
+                                        <li><a href="#">30 minutes</a></li>
+                                        <li><a href="#">60 minutes</a></li>
+                                        <li><a href="#">120 minutes</a></li>
+                                        <li><a href="#">At dawn</a></li>
+                                        <li><a href="#">At sunset</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Exit</button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -60,205 +60,370 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-10">
                         <h1>Planned</h1>
+						<div class="btn-group pull-right unitSelector">    
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#ModalQuick">
+								Quick schedule
+							</button>
+							<button type="button" class="btn btn-success" data-toggle="modal" data-target="#ModalSchedule">
+								Schedule new task
+							</button>
+                        </div>						
                         <p>Here is an overview of energy consumption:</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-10">
                         <div class="tile">
                             <h3>Today</h3>
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
                                     <th>Outlet</th>
-                                    <th>Description</th>
                                     <th>Status</th>
-                                    <th>Controls</th>
+                                    <th>Time to shutdown</th>
+									<th>Time to power on</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td>Bedroom 1</td>
                                     <td>Bedstand lamp</td>
                                     <td>On</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success">On</button>
-                                        <button type="button" class="btn btn-default">Off</button>
-                                    </td>
+                                    <td>01:37</td>
+									<td></td>
                                 </tr>
                                 <tr>
-                                    <td>Bedroom 2</td>
-                                    <td>Bedstand lamp</td>
+                                    <td>Dishwasher</td>
                                     <td>On</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success">On</button>
-                                        <button type="button" class="btn btn-default">Off</button>
-                                    </td>
+                                    <td>01:37</td>
+									<td></td>
                                 </tr>
                                 <tr>
-                                    <td>Bedroom 3</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success">On</button>
-                                        <button type="button" class="btn btn-default">Off</button>
-                                    </td>
+                                    <td>Kitchen TV</td>
+                                    <td>Off</td>
+									<td></td>
+                                    <td>01:20</td>
                                 </tr>
                                 <tr>
-                                    <td>Bedroom 4</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success">On</button>
-                                        <button type="button" class="btn btn-default">Off</button>
-                                    </td>
+                                    <td>TV bench</td>
+                                    <td>Off</td>
+									<td></td>
+                                    <td>01:20</td>
                                 </tr>
                                 <tr>
-                                    <td>Bedroom 5</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success">On</button>
-                                        <button type="button" class="btn btn-default">Off</button>
-                                    </td>
+                                    <td>Kitchen 1</td>
+                                    <td>Off</td>
+									<td></td>
+                                    <td>01:20</td>
                                 </tr>
                                 </tbody>
                             </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
+
+<!-- Modal Quick Schedule -->
+<div class="modal fade" id="ModalQuick" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modalHeader" id="myModalLabel">Quick schedule</h4>
+      </div>
+      <div class="modal-body">
+	  
+	  
+			<div class = "container">
+   
+					<div class = "marginOutlet">
+						<p class="modalBodyHeader">Outlet</p>
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								Bedstand lamp
+								<span class="caret"></span>
+							</button>
+  
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+	
+								<li><a href="#">Desktop outlet</a></li>
+								<li><a href="#">Dishwasher</a></li>
+								<li><a href="#">Hall outlet</a></li>
+								<li><a href="#">Kitchen 1</a></li>
+								<li><a href="#">Kitchen 2</a></li>
+								<li><a href="#">Kitchen TV</a></li>
+								<li><a href="#">Network equipment</a></li>
+								<li><a href="#">Reading lamp</a></li>
+								<li><a href="#">TV bench</a></li>
+							</ul>
+						</div>
+		
+					</div>
+      
+				<div class = "marginTTPO">
+
+					<p class="modalBodyHeader">Time to power on</p>
+					<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						Dawn
+						<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="#">Dusk</a></li>
+							<li><a href="#">Power high</a></li>
+							<li><a href="#">1 hour</a></li>
+							<li><a href="#">2 hours</a></li>
+							<li><a href="#">3 hours</a></li>
+						</ul>
+					</div>
+	  
+				</div>
+	  
+				<div class = "marginOutlet">
+
+					<p class="modalBodyHeader">Time until shutdown</p>
+					<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							1 hour
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="#">2 hours</a></li>
+							<li><a href="#">3 hours</a></li>
+							<li><a href="#">4 hours</a></li>
+							<li><a href="#">5 hours</a></li>
+							<li><a href="#">6 hours</a></li>
+						</ul>
+					</div>
+	  
+				</div>
+			</div>
+      
+		</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-success">Save changes</button>
+				</div>
+    </div>
+  </div>
+</div> <!--modal Quick end-->
+
+                
+				
+				<!-- Modal Schedule Task -->
+<div class="modal fade" id="ModalSchedule" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modalHeader" id="myModalLabel">Schedule new task</h4>
+      </div>
+      <div class="modal-body">
+	  
+	  
+			<div class = "container">
+				<div class = "marginOutlet">
+					<p class="modalBodyHeader">Outlet</p>
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								Bedstand lamp
+								<span class="caret"></span>
+							</button>
+  
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+	
+								<li><a href="#">Desktop outlet</a></li>
+								<li><a href="#">Dishwasher</a></li>
+								<li><a href="#">Hall outlet</a></li>
+								<li><a href="#">Kitchen 1</a></li>
+								<li><a href="#">Kitchen 2</a></li>
+								<li><a href="#">Kitchen TV</a></li>
+								<li><a href="#">Network equipment</a></li>
+								<li><a href="#">Reading lamp</a></li>
+								<li><a href="#">TV bench</a></li>
+							</ul>
+						</div>
+		
+				</div>
+      
+				<div class = "marginDay">
+					<p class="modalBodyHeader">Day</p>
+					<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							Monday
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="#">Tuesday</a></li>
+							<li><a href="#">Wednesday</a></li>
+							<li><a href="#">Thursday</a></li>
+							<li><a href="#">Friday</a></li>
+							<li><a href="#">Saturday</a></li>
+							<li><a href="#">Sunday</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class = "marginTime">
+					<p class="modalTimeHeader">Time</p>
+					<div class="container">
+						<form role="form">
+							<div class="marginBox">
+								<input class="form-control" id="ex1" type="text">
+							</div>
+						</form>
+					</div>
+				</div>
+				
+	  
+				<div class = "marginTTS">
+					<div class="dropdown">
+						<p class="modalBodyHeader">Time until shutdown</p>
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								1 hour
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#">2 hours</a></li>
+								<li><a href="#">3 hours</a></li>
+								<li><a href="#">4 hours</a></li>
+								<li><a href="#">5 hours</a></li>
+								<li><a href="#">6 hours</a></li>
+							</ul>
+					</div>
+				</div>
+				
+				<div class = "marginTTS">
+					<div class="dropdown">
+						<p class="modalBodyHeader">Repeat</p>
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								1 week
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#">2 weeks</a></li>
+								<li><a href="#">3 weeks</a></li>
+								<li><a href="#">4 weeks</a></li>
+								<li><a href="#">5 weeks</a></li>
+								<li><a href="#">6 weeks</a></li>
+							</ul>
+					</div>
+				</div>
+			</div>
+      </div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-success">Save changes</button>
+				</div>
+	</div>
+	</div>
+				
+</div> <!--modal sched end-->
+	
+	</div>
+	
+	</div>
+	
+	</div>
+
+				<div class="row">
+                    <div class="col-lg-10">
                         <div class="tile">
                             <h3>Tomorrow</h3>
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
                                     <th>Outlet</th>
-                                    <th>Description</th>
                                     <th>Status</th>
-                                    <th>Controls</th>
+                                    <th>Time to shutdown</th>
+									<th>Time to power on</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td>Bedroom 1</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success">On</button>
-                                        <button type="button" class="btn btn-default">Off</button>
-                                    </td>
+                                    <td>Kitchen 1</td>
+                                    <td>Off</td>
+                                    <td></td>
+									<td>18:14</td>
                                 </tr>
                                 <tr>
-                                    <td>Bedroom 2</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success">On</button>
-                                        <button type="button" class="btn btn-default">Off</button>
-                                    </td>
+                                    <td>Kitchen TV</td>
+                                    <td>Off</td>
+                                    <td></td>
+									<td>18:14</td>
                                 </tr>
                                 <tr>
-                                    <td>Bedroom 3</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success">On</button>
-                                        <button type="button" class="btn btn-default">Off</button>
-                                    </td>
+                                    <td>Dishwasher</td>
+                                    <td>Off</td>
+									<td></td>
+                                    <td>15:20</td>
                                 </tr>
                                 <tr>
-                                    <td>Bedroom 4</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success">On</button>
-                                        <button type="button" class="btn btn-default">Off</button>
-                                    </td>
+                                    <td>TV bench</td>
+                                    <td>Off</td>
+									<td></td>
+                                    <td>20:05</td>
                                 </tr>
                                 <tr>
-                                    <td>Bedroom 5</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success">On</button>
-                                        <button type="button" class="btn btn-default">Off</button>
-                                    </td>
+                                    <td>Desktop outlet</td>
+                                    <td>Off</td>
+									<td></td>
+                                    <td>16:46</td>
                                 </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
+                
+				
+				<div class="row">
+                    <div class="col-lg-10">
                         <div class="tile">
-                            <h3>This Week</h3>
+                            <h3>This week</h3>
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
                                     <th>Outlet</th>
-                                    <th>Description</th>
                                     <th>Status</th>
-                                    <th>Controls</th>
+                                    <th>Time to shutdown</th>
+									<th>Time to power on</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td>Bedroom 1</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success">On</button>
-                                        <button type="button" class="btn btn-default">Off</button>
-                                    </td>
+                                    <td>Network equipment</td>
+                                    <td>Off</td>
+                                    <td></td>
+									<td>01d:17h:49m</td>
                                 </tr>
                                 <tr>
-                                    <td>Bedroom 2</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success">On</button>
-                                        <button type="button" class="btn btn-default">Off</button>
-                                    </td>
+                                    <td>TV bench</td>
+                                    <td>Off</td>
+                                    <td></td>
+									<td>03d:18h:49m</td>
                                 </tr>
                                 <tr>
-                                    <td>Bedroom 3</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success">On</button>
-                                        <button type="button" class="btn btn-default">Off</button>
-                                    </td>
+                                    <td>Kitchen 1</td>
+                                    <td>Off</td>
+									<td></td>
+                                    <td>04d:20h:57m</td>
                                 </tr>
                                 <tr>
-                                    <td>Bedroom 4</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success">On</button>
-                                        <button type="button" class="btn btn-default">Off</button>
-                                    </td>
+                                    <td>Hall outlet</td>
+                                    <td>Off</td>
+									<td></td>
+                                    <td>02d:07h:36m</td>
                                 </tr>
                                 <tr>
-                                    <td>Bedroom 5</td>
-                                    <td>Bedstand lamp</td>
-                                    <td>On</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success">On</button>
-                                        <button type="button" class="btn btn-default">Off</button>
-                                    </td>
+                                    <td>Dishwasher</td>
+                                    <td>Off</td>
+									<td></td>
+                                    <td>05d:02h:04m</td>
                                 </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <button type="button" class="btn btn-success center-block">Load more...</button>
                 </div>
                 <div class="footer">
                     <div class="col-lg-12">
