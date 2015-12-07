@@ -37,7 +37,7 @@ window.onload = function() {
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(220,220,220,1)",
-            data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+            data: [randomScalingFactor(), randomScalingFactor(),randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), 100, randomScalingFactor()]
         }, {
             label: "National Average",
             fillColor: "rgba(1,125,183,0.2)",
@@ -55,7 +55,7 @@ window.onload = function() {
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(151,187,205,1)",
-            data: [17, 15, 26, 24, 14, 16, 14]
+            data: [30,30,30,30,30,30,30]
         }]
     }
     ctx = document.getElementById("linegraph").getContext("2d");
